@@ -6,6 +6,7 @@ public class PrimeNumbers {
         //Kollar ifall något av värdena är null
         if(start == null || end == null) throw new NullPointerException("Range is null");
         if(end < 0 || start < 0) throw new IllegalArgumentException("Range is negative");
+        if(end < start) throw new IllegalArgumentException("End is greater than start");
         for(int i = start; i <= end; i++){
             if(isPrime(i)){
                 sum += i;

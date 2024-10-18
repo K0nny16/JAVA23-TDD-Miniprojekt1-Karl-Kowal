@@ -33,6 +33,7 @@ class PrimeNumbersTest {
     void exemptionTest(){
         assertThrows(IllegalArgumentException.class, () -> primeNumbers.addNumbers(-1,2));
         assertThrows(IllegalArgumentException.class, () -> primeNumbers.addNumbers(2,-1));
+        assertThrows(IllegalArgumentException.class, () -> primeNumbers.addNumbers(3,2));
     }
     @Test
     @DisplayName("Input and output")
